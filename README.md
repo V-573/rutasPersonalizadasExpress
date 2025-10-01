@@ -13,3 +13,5 @@ Identity added: /c/Users/jhone/.ssh/id_ed25519 (vaj573cali@gmail.com)
 LO ANTERIOR NO FUNCIONO Y ME TOCO ELIMINAR LAS CLAVES SSH DE MI PORTATIL Y LA DEL GITHUB Y CREAR UNAS NUEVAS. En este momento estoy haciendo pruebas para subir desde mi pc de escritorio a github
 
 si fue exitosa la prueba subiendo desde el pc de escritorio. volver a hacerlo desde el portatil
+
+si funciono de ambos pc, toca dar git pull desde el proyecto y para subir los cambios el paso completo de git add . y luego git commit -m "comentario" y por ultimo git push -u origin main y funciona !
