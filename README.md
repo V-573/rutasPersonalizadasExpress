@@ -9,3 +9,5 @@ eval "$(ssh-agent -s)"
  ssh-add ~/.ssh/id_ed25519 
 y sale: 
 Identity added: /c/Users/jhone/.ssh/id_ed25519 (vaj573cali@gmail.com)
+
+LO ANTERIOR NO FUNCIONO Y ME TOCO ELIMINAR LAS CLAVES SSH DE MI PORTATIL Y LA DEL GITHUB Y CREAR UNAS NUEVAS. En este momento estoy haciendo pruebas para subir desde mi pc de escritorio a github
