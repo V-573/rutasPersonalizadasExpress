@@ -45,6 +45,10 @@ const app = express(); //Express es un framework, te permite:
 // DELETE	    Eliminar información
 // USE	        Middleware: código que se ejecuta antes de una ruta
 
+
+app.use(express.json());
+
+
 // 5. Servir archivos estáticos desde 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 //Qué hace app.use(...)?
@@ -65,6 +69,36 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Cuando el navegador pide: http://localhost:3000/about.html
 //No estás pidiendo directamente una función. Estás pidiendo: → “Dame un archivo llamado about.html”
 //Y Express, gracias a express.static(...), sabe que debe buscarlo en esta carpeta: /tu-proyecto/public/about.html
+
+
+// rutas get
+app.get('/about',(req, res)=>{
+    res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
+app.get('/contact',(req,res)=>{
+    res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+});
+
+app.get('/api/mensaje/',(req, res)=>{
+    res.json({mensaje:"hola desde la api"});
+});
+
+
+// ruta post
+app.post('/api/mensaje/', (req, res)=>{
+    const datos = req.body;
+    console.log("datos recibidos: ", datos);
+
+    res.json({
+        ok:true,
+        mensaje: "datos recibidos correctamente",
+        datosRecibidos: datos
+    });
+});
+
+
+
 
 // 6. Iniciar el servidor
 app.listen(PORT, () => {
